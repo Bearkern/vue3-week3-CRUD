@@ -41,7 +41,6 @@ const app = createApp({
         })
     },
     openModal(status, product) {
-      console.log(status, product);
       if (status === 'newProduct') {
         this.detail = {
           imagesUrl: []
@@ -68,7 +67,6 @@ const app = createApp({
 
       axios[method](url, { data: this.detail })
         .then(res => {
-          console.log(res);
           alert(res.data.message);
           this.getProducts();
           productModal.hide();
